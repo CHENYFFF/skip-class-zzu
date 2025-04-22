@@ -11,8 +11,8 @@ body {
 }
 
 .container {
-    width:700px;
-    max-width: 900px; /* iPhone尺寸近似 */
+    width:500px;
+    max-width: 700px; /* iPhone尺寸近似 */
     min-height: 100vh;
     margin: 0 auto;
     padding: 0;
@@ -21,8 +21,8 @@ body {
 }
 
 .app-title{
-    width:800px;
-    max-width: 1000px;
+    width:600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 15px 5px;
     display: flex; /* 使用flexbox布局 */
@@ -92,6 +92,7 @@ main {
 }
 
 table {
+    font-size: 15px;
     width: 100%;
     border-collapse: collapse;
     margin-top: 0px;
@@ -101,7 +102,7 @@ table {
 td {
     border: 2px solid #ededed;
     padding: 7px 15px;
-    font-size: 15px;
+    
     font-weight: 550;
     color: #6d6d6d;
     text-align: left;
