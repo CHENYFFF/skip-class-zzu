@@ -99,7 +99,8 @@
                 
                 <div class="form-group">
                     <label for="edit-college">学院：</label>
-                    <input type="text" id="edit-college" value="第三临床学院">
+                    <!-- <input type="text" id="edit-college" value="第三临床学院"> -->
+                    <textarea id="edit-college">第三临床学院</textarea>
                 </div>
                 
                 <div class="form-group">
@@ -162,7 +163,8 @@
             // 更新表格中的值
             document.getElementById('studentId').innerText = studentId;
             document.getElementById('studentName').innerText = studentName;
-            document.getElementById('college').innerText = college;
+            // document.getElementById('college').innerText = college;
+            document.getElementById('college').innerHTML = college.replace('\n', '<br>');
             document.getElementById('leaveDate').innerHTML = leaveDate.replace('\n', '<br>');
             document.getElementById('leaveDays').innerText = leaveDays;
             document.getElementById('leaveType').innerText = leaveType;
