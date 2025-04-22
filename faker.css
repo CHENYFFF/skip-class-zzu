@@ -11,7 +11,8 @@ body {
 }
 
 .container {
-    max-width: 414px; /* iPhone尺寸近似 */
+    width:80vw;
+    max-width: 1000px; /* iPhone尺寸近似 */
     min-height: 100vh;
     margin: 0 auto;
     padding: 0;
@@ -20,7 +21,8 @@ body {
 }
 
 .app-title{
-    width: 500px;
+    width:90vw;
+    max-width: 800px;
     margin: 0 auto;
     padding: 15px 5px;
     display: flex; /* 使用flexbox布局 */
