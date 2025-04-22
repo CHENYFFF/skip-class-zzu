@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+body {
+    background-color: #fff;
+    color: #444;
+}
+
+.container {
+    max-width: 414px; /* iPhone尺寸近似 */
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-title{
+    width: 500px;
+    margin: 0 auto;
+    padding: 15px 5px;
+    display: flex; /* 使用flexbox布局 */
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: space-between; /* 在容器内均匀分布元素 */
+}
+
+.app-title h1{
+    color: #000;
+    font-weight:500;
+    font-size: 22px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 69px;
+    background-color: rgb(34,61,115); /* 深蓝色 */
+    padding: 5px 5px;
+}
+
+.logo {
+    padding-top: 5px;
+    margin-right: 10px;
+}
+
+header h1 {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    padding: 0px;
+}
+
+.title-container {
+    padding: 10px 5px;
+    display: flex; /* 使用flexbox布局 */
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: space-between; /* 在容器内均匀分布元素 */
+}
+
+.title-container h1 {
+    color: #000000;
+    font-weight:500;
+    font-size: 30px;
+    margin: 0; /* 移除标题默认外边距 */
+    flex-grow: 1; /* 让标题占据中间剩余的空间 */
+    text-align: center; /* 标题文字居中 */
+}
+
+.title-container button {
+    font-size: 15px;
+    background-color: rgb(37,106,195);
+    color: #ffffff;
+    border-radius: 3px;
+    border: none;
+    width: 55px;
+    height: 40px;
+    padding: 5px 10px; /* 增加一点水平内边距 */
+    margin-left: 10px; /* 与标题保持一定距离 */
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0px;
+    border: 2px solid #ededed;
+}
+
+td {
+    border: 2px solid #ededed;
+    padding: 7px 15px;
+    font-size: 15px;
+    font-weight: 550;
+    color: #6d6d6d;
+    text-align: left;
+}
+
+.section-header {
+    background-color: #ffffff;
+    /* font-weight: bold; */
+    text-align: center;
+}
+
+
+/* ---------------------------------表单部分--------------------------------- */
+.edit-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.edit-section h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+
+#update-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #005fbe;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#update-btn:hover {
+    background-color: #004a9e;
+}
