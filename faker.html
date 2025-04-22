@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>郑州大学学生请假系统</title>
+    <link rel="stylesheet" href="./faker.css">
+</head>
+<body>
+    <div class="app-title">  
+        <div style=" display: flex; align-items: center; ">
+            <img style="width: 28px; " src="./arrow-single.svg"/>
+            <p style="font-size: 20px; font-weight:500;">返回</9>
+        </div>
+
+        <h1>郑州大学学生请假系统</h1>
+        <img style="width: 30px; " src="./3bot.svg"/>
+    </div>
+    <div class="container">
+        <header>
+            <!-- <div class="logo">  
+                <img style="width: 45px;" src="./Zhengzhou_University1.svg"/>
+            </div>
+            <h1>学生请假系统</h1> -->
+            <div class="logo">  
+                <img style="width: 250px;" src="./banner.jpg"/>
+            </div>
+        </header>
+        <div class="title-container">  
+            <img style="width: 23px; margin-top: 5px;" src="./arrow.svg"/>
+            <h1>郑州大学学生请假条</h1>
+            <button>保存</button>
+        </div>
+
+        <main>
+            <table>
+                <tr>
+                    <td colspan="6" class="section-header">学生基本信息</td>
+                </tr>
+                <tr>
+                    <td style="width: 45px;">学号</td>
+                    <td id="studentId">202151070517</td>
+                    <td style="width: 45px;">姓名</td>
+                    <td style="width: 45px;" id="studentName">李永佳</td>
+                    <td style="width: 45px;">学院</td>
+                    <td id="college">第三临床学院</td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="section-header">请假信息</td>
+                </tr>
+                <tr>
+                    <td>请假日期</td>
+                    <td id="leaveDate">2025年03月11<br>日至03月11日</td>
+                    <td>请假时长</td>
+                    <td id="leaveType">1天</td>
+                    <td>请假类型</td>
+                    <td id="leaveDays">因病</td>
+                </tr>
+                <tr>
+                    <td>外出地址</td>
+                    <td colspan="5" id="leaveAddress">河南省郑州市宿舍</td>
+                </tr>
+                <tr>
+                    <td>请假事由</td>
+                    <td colspan="5" id="leaveReason">发烧</td>
+                </tr>
+                <tr>
+                    <td>提交时间</td>
+                    <td colspan="5" id="submitTime">2025/3/11 7:47:21</td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="section-header">审核信息</td>
+                </tr>
+                <tr>
+                    <td>审批结果</td>
+                    <td colspan="5">已批准</td>
+                </tr>
+                <tr>
+                    <td>辅导员</td>
+                    <td>付博闻</td>
+                    <td>审核意见</td>
+                    <td>同意</td>
+                    <td>审核时间</td>
+                    <td id="reviewTime">2025/3/11<br>8:07:31</td>
+                </tr>
+            </table>
+            
+            <div class="edit-section">
+                <h2>编辑信息</h2>
+                <div class="form-group">
+                    <label for="edit-studentId">学号：</label>
+                    <input type="text" id="edit-studentId" value="202151070517">
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-studentName">姓名：</label>
+                    <input type="text" id="edit-studentName" value="李永佳">
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-college">学院：</label>
+                    <input type="text" id="edit-college" value="第三临床学院">
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-leaveDate">请假日期：</label>
+                    <textarea id="edit-leaveDate">2025年03月11
+日至03月11日</textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-leaveDays">请假时长：</label>
+                    <input type="text" id="edit-leaveDays" value="1天">
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-leaveDays">请假类型：</label>
+                    <input type="text" id="edit-leaveType" value="病假">
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-leaveAddress">外出地址：</label>
+                    <input type="text" id="edit-leaveAddress" value="河南省郑州市宿舍">
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-leaveReason">请假事由：</label>
+                    <textarea id="edit-leaveReason">发烧</textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-submitTime">提交时间：</label>
+                    <input type="text" id="edit-submitTime" value="2025/3/11 7:47:21">
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-reviewTime">审核时间：</label>
+                    <textarea id="edit-reviewTime">2025/3/11
+8:07:31</textarea>
+                </div>
+                
+                <button id="update-btn">更新</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('update-btn').addEventListener('click', function() {
+            // 获取所有编辑字段的值
+            const studentId = document.getElementById('edit-studentId').value;
+            const studentName = document.getElementById('edit-studentName').value;
+            const college = document.getElementById('edit-college').value;
+            const leaveDate = document.getElementById('edit-leaveDate').value;
+            const leaveType = document.getElementById('edit-leaveType').value;
+            
+            const leaveDays = document.getElementById('edit-leaveDays').value;
+            const leaveAddress = document.getElementById('edit-leaveAddress').value;
+            const leaveReason = document.getElementById('edit-leaveReason').value;
+            const submitTime = document.getElementById('edit-submitTime').value;
+            const reviewTime = document.getElementById('edit-reviewTime').value;
+            
+            // 更新表格中的值
+            document.getElementById('studentId').innerText = studentId;
+            document.getElementById('studentName').innerText = studentName;
+            document.getElementById('college').innerText = college;
+            document.getElementById('leaveDate').innerHTML = leaveDate.replace('\n', '<br>');
+            document.getElementById('leaveDays').innerText = leaveDays;
+            document.getElementById('leaveType').innerText = leaveType;
+            document.getElementById('leaveAddress').innerText = leaveAddress;
+            document.getElementById('leaveReason').innerText = leaveReason;
+            document.getElementById('submitTime').innerText = submitTime;
+            document.getElementById('reviewTime').innerHTML = reviewTime.replace('\n', '<br>');
+            
+            alert('信息已更新！');
+        });
+    </script>
+</body>
+</html>
